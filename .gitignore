@@ -1,4 +1,9 @@
+# pdf
+*.pdf
+
+# Images
 *.jpg
+*.png
 
 # Logs
 logs

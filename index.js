@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
   res.render("home"); // No need for the full path, just the filename without .ejs
 });
 
+app.get("/sign-up", (req, res) => {
+  res.render("signUp")
+})
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
