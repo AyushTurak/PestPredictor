@@ -53,6 +53,10 @@ app.get("/disease", (req, res) => {
   res.render("disease.ejs");
 });
 
+app.get("/pest", (req, res) => {
+  res.render("pest.ejs");
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
