@@ -10,6 +10,7 @@ import GoogleStrategy from "passport-google-oauth2";
 import session from "express-session";
 import env from "dotenv";
 
+
 const app = express();
 const port = 3000;
 const saltRounds = 10;
@@ -30,7 +31,7 @@ app.set("view engine", "ejs");
 // );
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("public"))
 
 // app.use(passport.initialize());
 // app.use(passport.session());
@@ -63,3 +64,4 @@ app.get("/disease", (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+
