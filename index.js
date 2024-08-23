@@ -1,6 +1,4 @@
 import express from "express";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
@@ -15,12 +13,6 @@ const app = express();
 const port = 3000;
 const saltRounds = 10;
 env.config();
-
-// Get current file path
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-// Set the view engine to EJS
-app.set("view engine", "ejs");
 
 // app.use(
 //   session({
@@ -46,19 +38,19 @@ const db = new pg.Client({
 db.connect();
 
 app.get("/", (req, res) => {
-  res.render("home"); // No need for the full path, just the filename without .ejs
+  res.render("home.ejs"); // No need for the full path, just the filename without .ejs
 });
 
 app.get("/sign-up", (req, res) => {
-  res.render("signUp");
+  res.render("signUp.ejs");
 });
 
 app.get("/sign-in", (req, res) => {
-  res.render("signIn");
+  res.render("signIn.ejs");
 });
 
 app.get("/disease", (req, res) => {
-  res.render("disease");
+  res.render("disease.ejs");
 });
 
 app.listen(port, () => {

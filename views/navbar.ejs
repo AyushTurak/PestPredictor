@@ -9,7 +9,7 @@
       >
         <img
           src="/images/brand/svg/logo-no-background.svg"
-          style="height: 40px; margin-right: 4px;"
+          style="height: 40px; margin-right: 4px"
         />
       </a>
 
@@ -17,7 +17,9 @@
         class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
       >
         <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#services" class="nav-link px-2 text-white">Services</a></li>
+        <li>
+          <a href="#services" class="nav-link px-2 text-white">Services</a>
+        </li>
         <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
         <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
@@ -33,9 +35,29 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2 login-btn">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button
+          type="button"
+          class="btn btn-outline-light me-2 login-btn"
+          onclick="``"
+        >
+          Login
+        </button>
+        <button type="button" class="btn btn-warning register-btn">
+          Sign-up
+        </button>
       </div>
     </div>
   </div>
 </header>
+<script>
+  document
+    .querySelector(".login-btn")
+    .addEventListener("click", () => {
+    window.location.href = "/sign-in";
+  });
+  document
+    .querySelector(".register-btn")
+    .addEventListener("click", () => {
+    window.location.href = "/sign-up";
+  });
+</script>
